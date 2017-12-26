@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <button><a href="/add_product_view">Add new products</a></button>
+                    
+                    @foreach ($products as $user)
+                        <p>This is user {{ $user->id }}</p>
+                    @endforeach
+                    {{$products->render()}}
                 </div>
             </div>
         </div>
