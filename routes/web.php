@@ -26,10 +26,11 @@ Route::get('/show_product_view/{product_id}', 'HomeController@show_product_view'
 
 Route::get('/show_cart_view', 'HomeController@show_cart_view');
 
+Route::get('/add_to_cart/{add_to_cart_id}/{add_to_cart_product_name}/{add_to_cart_product_price}', 'HomeController@add_to_cart');
 
-Route::get('/add_to_cart', function () {
-	// Cart::instance('shopping')->destroy();
-    Cart::instance('shopping')->add('192ao1ss', 'Product new', 1, 10.00);
-    // return view('welcome');
-});
+// Route::get('/add_to_cart', function () {
+// 	// Cart::instance('shopping')->destroy();
+//     Cart::instance('shopping')->add('192ao1ss', 'Product new', 1, 10.00);
+//     // return view('welcome');
+// });
 

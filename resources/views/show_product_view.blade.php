@@ -32,7 +32,8 @@
           <li>Consectetur</li>
           <li>Adipiscing Elit</li>
         </ul> -->
-        <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+        <a class="btn btn-primary btn-lg" href="/add_to_cart/{{$products[0]->id.$products[0]->title}}/{{$products[0]->title}}/{{$products[0]->price}}">
+          Add to Cart!</a>
         
       </div>
 

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Validator;
 // use \Input as Input;
 use Illuminate\Support\Facades\Input;
 use App\Products;
-
+use Cart;
 // use Session;
 
 class HomeController extends Controller
@@ -74,6 +74,11 @@ class HomeController extends Controller
 
     public function show_cart_view(){
         return view('show_cart_view');
+    }
+
+    public function add_to_cart($add_to_cart_id,$add_to_cart_product_name,$add_to_cart_product_price){
+        Cart::instance('shopping')->add($add_to_cart_id, $add_to_cart_product_name, 1, $add_to_cart_product_price);
+        return back()->with('status', 'Product Added To Cart!');
     }
 
     
