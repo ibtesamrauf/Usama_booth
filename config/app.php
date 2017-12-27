@@ -163,6 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Jrean\UserVerification\UserVerificationServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
 
         /*
@@ -228,7 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
-
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 
