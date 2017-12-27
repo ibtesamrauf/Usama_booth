@@ -15,7 +15,7 @@
         @foreach ($products as $user)
             <div class="col-lg-4 col-sm-6 portfolio-item">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{ asset('uploads/'.$user->image) }}" alt=""></a>
+                <a href="/show_product_view/{{ $user->id }}"><img class="card-img-top" src="{{ asset('uploads/'.$user->image) }}" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">{{ $user->title }}</a>

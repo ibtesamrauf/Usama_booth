@@ -67,8 +67,15 @@ class HomeController extends Controller
         return redirect('home')->with('status', 'Product Added!');
     }
 
-    public function show_product_view(){
-        return view('home' , compact('products'));
+    public function show_product_view($product_id){
+        $products = Products::where('id' , $product_id)->get();
+        return view('show_product_view' , compact('products'));
     }
+
+    public function show_cart_view(){
+        return view('show_cart_view');
+    }
+
+    
 
 }
