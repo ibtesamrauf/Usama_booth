@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Products::paginate(15);
+        $products = Products::orderBy('id','DESC')->paginate(15);
         return view('home' , compact('products'));
     }
 
@@ -65,6 +65,10 @@ class HomeController extends Controller
         ]);
 
         return redirect('home')->with('status', 'Product Added!');
+    }
+
+    public function show_product_view(){
+        return view('home' , compact('products'));
     }
 
 }

@@ -20,5 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/add_product_view', 'HomeController@add_product_view');
-
 Route::post('/add_product', 'HomeController@add_product');
+
+Route::get('/show_product_view', 'HomeController@show_product_view');
