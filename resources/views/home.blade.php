@@ -20,7 +20,7 @@
                   <h4 class="card-title">
                     <a href="#">{{ $user->title }}</a>
                   </h4>
-                  <p class="card-text">{{ $user->description }}</p>
+                  <p class="card-text"><?php echo addslashes(substr($user->description, 0, 80))." ..." ?></p>
                 </div>
               </div>
             </div>

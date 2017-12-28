@@ -19,7 +19,7 @@
               <a class="nav-link" href="/add_product_view">Add Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/show_cart_view">Show cart view</a>
+              <a class="nav-link" href="/show_cart_view">Show cart view <?php if(!empty(Cart::instance('shopping')->count())){ echo "(".Cart::instance('shopping')->count()." Items)"; } ?></a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
